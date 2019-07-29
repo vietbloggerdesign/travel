@@ -1,407 +1,453 @@
-(function($){
-	"use strict";
+/*!
+ * jQuery Custom Select Plugin - Master Source
+ * 2014-09-03
+ *
+ * http://www.blissmedia.com.au/
+ *
+ * Copyright 2014 Bliss Media
+ * Released under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
 
-	$(window).on('load', function(){
-		$('#status').fadeOut();
-		$('#preloader').delay(350).fadeOut('fast');
-		$(window).stellar({});
-	});
+;(function($) {
+  $.fn.customselect = function(method, value) {
 
-	/*====== countdown ========*/
-	$('[data-countdown]').each(function () {
-		var $this = $(this),
-			finalDate = $(this).data('countdown');
-		$this.countdown(finalDate, function (event) {
-			$this.html(event.strftime('<ul><li><span class="cdown days"><span class="time-count">%-D</span><p class="day-css">Days</p></span></li><li><span class="cdown hour"><span class="time-count">%-H</span> <p class="day-css">Hour</p></span><l/i><li><span class="cdown minutes"><span class="time-count">%M</span> <p class="day-css">Min</p></span></li><li> <span class="cdown second"><span class="time-count">%S</span> <p class="day-css">Sec</p></span></li></ul>'));
-		});
-	});
+    // Default Options
+    var $options  = {
+      "csclass"         : "custom-select",  // Class to match
+      "search"          : true,             // Is searchable?
+      "numitems"        : 4,                // Number of results per page
+      "searchblank"     : false,            // Search blank value options?
+      "showblank"       : true,             // Show blank value options?
+      "searchvalue"     : false,            // Search option values?
+      "hoveropen"       : false,            // Open the select on hover?
+      "emptytext"       : "",               // Change empty option text to a set value
+      "showdisabled"    : false,            // Show disabled options
+      "useoptionclass"  : false,
+      "mobilecheck"     : function() {      // Mobile check function / boolean
+        return navigator.platform && navigator.userAgent.match(/(android|iphone|ipad|blackberry)/i);
+      }
+    };
 
-	/*====== Map Pointer ========*/
-	$('.mapp').addClass('scrolloff');
+    // Check for Additional Options
+    if(method && typeof method == "object") {
+      $.extend($options, method);
+    }
 
-	$('#overlay').on("mouseup", function() {
-	  	$('.mapp').addClass('scrolloff');
-  	});
-	$('#overlay').on("mousedown", function() {
-	  	$('.mapp').removeClass('scrolloff');
-  	});
-	$(".map").mouseleave(function() {
-	  	$('.mapp').addClass('scrolloff');
-	});
+    // Mobile check
+    var $is_mobile = typeof $options.mobilecheck == "function" ? $options.mobilecheck.call() : $options.mobilecheck;
 
-	/*====== jQuery MeanMenu ========*/
-	jQuery('nav').meanmenu();
-  
-	/*====== wow js ========*/
-	new WOW().init();
+    // Select validation
+    var items = $is_mobile ? $(this).filter("select") : $(this).filter("select:not([multiple])");
 
-	/*====== counter ========*/
-	$('.counter').counterUp({
-		delay: 10,
-		time: 1000
-	}); 
-	
-	/*====== carasol destination ========*/
-	$('.destination-slider-active').owlCarousel({
-		loop:true,
-		margin:10,
-		nav:true,
-		autoplay:false,
-		autoplayTimeout:1000,
-		animateOut:true,
-		animateIn:true,
-		responsive:{
-			0:{
-				items:1
-			},
-			600:{
-				items:3
-			},
-			1000:{
-				items:5
-			}
-		}
-	});
+    // Customselect control
+    items.each(function() {
 
-	/*====== Testimonial Carousel Slick ========*/
-	$('.slider-for').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '.slider-nav',
-		dots: false,
-	});
-	
-	$('.slider-nav').slick({
-		slidesToShow:3,
-		slidesToScroll:1,
-		asNavFor: '.slider-for',
-		dots: false,
-		centerMode: true,
-		centerPadding: '0px',
-		focusOnSelect: true,
-		variableWidth: false,
-		arrows: false,
-		autoplay: false,
-		responsive: [
-			{
-			  breakpoint: 768,
-			  settings: {
-				arrows: false,
-				centerMode: true,
-				centerPadding: '0px',
-				slidesToShow: 3
-			  }
-			},
-			{
-			  breakpoint: 480,
-			  settings: {
-				arrows: false,
-				centerMode: true,
-				centerPadding: '0px',
-				slidesToShow: 3
-			  }
-			}
-		]
-	});
+      // Original Select
+      var $select   = $(this);
 
-	/*====== partner slider ========*/
-	$('.partner-slider-active').owlCarousel({
-		loop:true,
-		margin:20,
-		nav:false,
-		autoplay:false,
-		autoplayTimeout:1000,
-		animateOut:true,
-		animateIn:true,
-		responsive:{
-			0:{
-				items:2
-			},
-			600:{
-				items:3
-			},
-			1000:{
-				items:5
-			}
-		}
-	});
+      // Preset Options
+      if($select.data("cs-options")) {
+        $.extend($options, $select.data("cs-options"));
+      }
 
-	/*====== tab js ========*/
-	$(function(){var b="fadeInLeft";var c;var a;d($("#myTab1 a"),$("#tab-content1"));function d(e,f,g){e.click(function(i){i.preventDefault();$(this).tab("show");var h=$(this).data("easein");if(c){c.removeClass(a);}if(h){f.find("div.active").addClass("animated "+h);a=h;}else{if(g){f.find("div.active").addClass("animated "+g);a=g;}else{f.find("div.active").addClass("animated "+b);a=b;}}c=f.find("div.active");});}$("a[rel=popover]").popover().click(function(f){f.preventDefault();if($(this).data("easein")!=undefined){$(this).next().removeClass($(this).data("easein")).addClass("animated "+$(this).data("easein"));}else{$(this).next().addClass("animated "+b);}});});
-	$(function(){var b="fadeInLeft";var c;var a;d($("#myTab2 a"),$("#tab-content2"));function d(e,f,g){e.click(function(i){i.preventDefault();$(this).tab("show");var h=$(this).data("easein");if(c){c.removeClass(a);}if(h){f.find("div.active").addClass("animated "+h);a=h;}else{if(g){f.find("div.active").addClass("animated "+g);a=g;}else{f.find("div.active").addClass("animated "+b);a=b;}}c=f.find("div.active");});}$("a[rel=popover]").popover().click(function(f){f.preventDefault();if($(this).data("easein")!=undefined){$(this).next().removeClass($(this).data("easein")).addClass("animated "+$(this).data("easein"));}else{$(this).next().addClass("animated "+b);}});});
-	
-	/*====== date picker ========*/
-	$( "#datepicker" ).datepicker();
-	$( "#datepicker1" ).datepicker();
-	$( "#datepicker2" ).datepicker();
-	$( "#datepicker3" ).datepicker();
-	$( "#datepicker4" ).datepicker();
-	$( "#pickupdate" ).datepicker();
-	$( "#shippickupdate" ).datepicker();
-	$( "#daperture_date" ).datepicker();
-	$( "#return_date" ).datepicker();
-	$( "#booking-date" ).datepicker();
+      // Custom Select Container
+      var $this     = $select.parents($options.selector+":first");
 
-	/*====== select option ========*/
-	$("#standard1").customselect();
-	$("#standard2").customselect();
-	$("#standard3").customselect();
-	$("#standard4").customselect();
-	$("#nosearch").customselect({search: false});
-	$("#nosearch1").customselect({search: false});
-	$("#nosearch2").customselect({search: false});
+      var methods   = {
+        init: function() {
+          // Initital Setup
+          var setup = {
+            init: function() {
+              // Create Elements + Events
+              setup.container();
+              setup.value();
+              setup.subcontainer();
+            },
 
+            container: function() {
+              $this = $("<div/>").addClass($options.csclass);
+              if($is_mobile) {
+                $this.addClass($options.csclass + "-mobile");
+                $select.css("opacity", 0);
+              }
 
-	/*====== Scroll to top ========*/
-	jQuery('.to-top').on('click', function(event) {
-	  	jQuery('html,body').animate({
-		  	scrollTop: 0
-	  	}, 1000);
-	});
+              // Selector Container
+              $select.before($this);
+              $select.appendTo($this);
+              $select.off("change", setup._onchange).change(setup._onchange);
 
-	jQuery(window).scroll(function() {
-	  	if (jQuery(window).scrollTop() > 100) {
-		  	jQuery('.to-top').fadeIn(1000);
-	  	} else {
-		  	jQuery('.to-top').fadeOut(1000);
-	  	};
-	});
+              // Standard Events
+              var hover_timeout = null;
+              $this.hover(function() {
+                if(hover_timeout) clearTimeout(hover_timeout);
+                $this.addClass($options.csclass+"-hover");
+              }, function() {
+                if($options.hoveropen) hover_timeout = setTimeout(methods.close, 750);
+                $this.removeClass($options.csclass+"-hover");
+              });
 
-	/*====== contact form ========*/
-	$('#contactform').submit(function(){
-		var action = $(this).attr('action');
-		$("#message").slideUp(750,function() {
-		$('#message').hide();
-		$('#submit')
-			.after('')
-			.attr('disabled','disabled');
-		$.post(action, {
-			name: $('#name').val(),
-			email: $('#email').val(),
-			subject: $('#subject').val(),
-			comments: $('#comments').val()
-		},
-			function(data){
-				document.getElementById('message').innerHTML = data;
-				$('#message').slideDown('slow');
-				$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
-				$('#submit').removeAttr('disabled');
-				if(data.match('success') != null) $('#contactform').slideUp('slow');
-			}
-		);
-		});
-		return false;
-	});
+              $(document).mouseup(function() {
+                if($this.is($options.selector+"-open")) {
+                  if(!$this.is($options.selector+"-hover")) methods.close();
+                  else $this.find("input").focus();
+                }
+              });
+            },
 
-	/*====== home version 5 slider ========*/
-	$('.slider-bg-acive').owlCarousel({
-		loop:true,
-		nav:false,
-		autoplay:true,
-		autoplayTimeout:11000,
-		mergeFit:true,
-		responsive:{
-			0:{
-				items:1
-			},
-			600:{
-				items:1
-			},
-			1000:{
-				items:1
-			}
-		}
-	});
-	
-	/*====== home 5 testimonoial  ========*/
-	$('.testimonial-5-active').owlCarousel({
-		loop:true,
-		margin:10,
-		nav:true,
-		dots:true,
-		autoplay:true,
-		autoplayTimeout:11000,
-		responsive:{
-			0:{
-				items:1
-			},
-			600:{
-				items:1
-			},
-			1000:{
-				items:1
-			}
-		}
-	}); 
+            value: function() {
+              var value = $("<a href='#'><span/></a>").appendTo($this);
+              $select.appendTo($this);
 
-	/*====== package slider ========*/
-	$('.popular-packages-carasoul').owlCarousel({
-		loop:true,
-		margin:20,
-		nav:true,
-		autoplay:false,
-		autoplayTimeout:1000,
-		navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
-		responsive:{
-			0:{
-				items:1
-			},
-			600:{
-				items:2
-			},
-			1000:{
-				items:3
-			}
-		}
-	});
+              var searchvalue = "";
+              var searchtimer = null;
+              value.click(function(e) { e.preventDefault(); })
+                    .focus(function() { $this.addClass($options.csclass+"-focus"); })
+                    .blur(function() { $this.removeClass($options.csclass+"-focus"); });
+              $("html").keyup(function(e) {
+                if(value.is(":focus")) {
+                  var keycode = e.which;
+                  var options = $select.find("option").not(":disabled");
+                  if(keycode >= 48 && keycode <= 90) { // 0-9 a-z
+                    searchvalue += String.fromCharCode(keycode).toLowerCase();
+                    for(var i=0;i<options.length;i++) {
+                      var option  = options.eq(i);
+                      var text    = (option.text()+"").toLowerCase();
 
-	/*====== Magnific Popup for video ========*/
-	$('.video_iframe').magnificPopup({
-		type: 'iframe',
-		iframe: {
-		  markup: '<div class="mfp-iframe-scaler">' +
-			  '<div class="mfp-close"></div>' +
-			  '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-			  '</div>',
-	  	patterns: {
-			youtube: {
-			  	index: 'youtube.com/',
-			  	id: 'v=',
-			  	src: 'http://www.youtube.com/embed/%id%?autoplay=1'
-			},
-		 	vimeo: {
-		  	index: 'vimeo.com/',
-		  	id: '/',
-		  	src: '//player.vimeo.com/video/%id%?autoplay=1'
-		},
-		gmaps: {
-		  	index: '//maps.google.',
-		  	src: '%id%&output=embed'
-		}
-		  	},
-		  	srcAction: 'iframe_src'
-		}
-	});
+                      if(!option.is(":disabled") && $options.searchblank || text.length > 0) {
+                        if(text.indexOf(searchvalue) == 0) {
+                          $select.val(option.attr("value")).change();
+                          break;
+                        }
+                      }
+                    };
 
-	/*====== slick partner slider ========*/
-	$('.partner-slider-2').slick({
-		infinite: true,
-		slidesToShow: 5,
-		slidesToScroll: 5,
-		autoplay: true,
-		dots: false,
-		arrows : false,
-		autoplay: true,
-		autoplaySpeed: 5000,
-		responsive: [
-		{
-	  	breakpoint: 1024,
-		  	settings: {
-				slidesToShow: 3,
-				slidesToScroll: 3,
-				infinite: true,
-				dots: false
-		  	}
-		},
-		{
-	  	breakpoint: 600,
-		  	settings: {
-				slidesToShow: 2,
-				slidesToScroll: 2
-		  	}
-		},
-		{
-	  	breakpoint: 480,
-		  	settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1
-		  	}
-		}]
-	});
+                    if(searchtimer) clearTimeout(searchtimer);
+                    searchtimer = setTimeout(function() {
+                      searchvalue = "";
+                    }, 1000);
 
-	/*====== masonary gallery ========*/
- 	var $grid1 = $('.grid-3').imagesLoaded(function() {
-       	$grid1.isotope({
-        	itemSelector: '.grid-item',
-        	percentPosition: true,
-       		masonry: {
-          		columnWidth:1
-        	}
-      	}); 
-    });
-	 
-    $('.grid-3').each(function() {
-		$(this).magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        gallery: {
-			enabled: true
+                    e.preventDefault();
+                  }
+                  else if(keycode == 27) {
+                    if(searchtimer) clearTimeout(searchtimer);
+                    searchvalue = "";
+
+                    e.preventDefault();
+                  }
+                  else if(keycode == 38) { // Up
+                    var selected  = $select.find("option:selected");
+                    var index     = options.index(selected);
+                    if(index > 0) {
+                      $select.val(options.eq(index-1).attr("value"));
+                    }
+                    else {
+                      $select.val(options.eq(options.length-1).attr("value"));
+                    }
+                    $select.change();
+
+                    e.preventDefault();
+                  }
+                  else if(keycode == 40) { // Down
+                    var selected  = $select.find("option:selected");
+                    var index     = options.index(selected);
+                    if(index < options.length-1) {
+                      $select.val(options.eq(index+1).attr("value"));
+                    }
+                    else {
+                      $select.val(options.eq(0).attr("value"));
+                    }
+                    $select.change();
+
+                    e.preventDefault();
+                  }
+                }
+              });
+
+              var option = $select.find("option:selected");
+              value.find("span").html(option.text().length > 0 ? option.text() : $options.emptytext);
+              value.removeAttr("class");
+              if($options.useoptionclass && option.attr("class")) {
+                value.addClass(option.attr("class") || "");
+              }
+
+              if($options.hoveropen) {
+                value.mouseover(methods.open);
+              }
+              else {
+                value.click(methods.toggle);
+              }
+            },
+
+            subcontainer: function() {
+              // Container
+              var subcont = $("<div/>").appendTo($this);
+
+              // Input Box
+              var input   = $("<input type='input' placeholder='Search Location'/>").appendTo(subcont);
+              input.keyup(function(e) {
+                if($.inArray(e.which, [13,38,40])<0) {
+                  if($options.search) {
+                    methods.search($(this).val());
+                  }
+                  else {
+                    methods.searchmove($(this).val());
+                    $(this).val("");
+                  }
+                }
+              }).keydown(function(e) {
+                switch(e.which) {
+                  case 13: // Enter
+                    val       = $this.find("ul li.active.option-hover").data("value");
+                    disabled  = $this.find("ul li.active.option-hover").is(".option-disabled");
+                    methods.select(val, disabled);
+                  break;
+                  case 38: // Up
+                    methods.selectUp();
+                  break;
+                  case 40: // Down
+                    methods.selectDown();
+                  break;
+                  case 27: // Esc
+                    methods.close();
+                  break;
+                  default:
+                    return true;
+                  break;
+                }
+
+                e.preventDefault();
+                return false;
+              }).blur(function() { $(this).val(""); });
+              if(!$options.search) {
+                input.addClass($options.csclass+"-hidden-input");
+              }
+
+              // Scrolling Container
+              var scroll  = $("<div/>").appendTo(subcont);
+
+              // Selectable Items
+              var select  = $("<ul/>").appendTo(scroll);
+              $select.find("option").each(function(i) {
+                var val       = $(this).attr("value");
+                var txt       = $(this).text();
+                var disabled  = $(this).is(":disabled");
+                if(($options.showblank || val.length > 0) && ($options.showdisabled || !disabled)){
+                  $("<li/>", {
+                    'class':      'active'
+                                    + (i==0 ? ' option-hover' : '')
+                                    + ($(this).is(":disabled") ? ' option-disabled' : '')
+                                    + ($options.useoptionclass && $(this).attr("class") ? ' '+$(this).attr("class") : ''),
+                    'data-value': val,
+                    'text':       txt.length > 0 ? txt : $options.emptytext
+                  }).appendTo(select);
+                }
+              });
+              var options = select.find("li");
+              select.find("li").click(function() {
+                methods.select($(this).data("value"), $(this).is(".option-disabled"));
+              });
+
+              $this.find("div div").css({
+                "overflow-y": options.length > $options.numitems ? "scroll" : "visible"
+              });
+
+              $("<li/>", {
+                'class':  'no-results',
+                'text':   "No results"
+              }).appendTo(select);
+            },
+
+            // Catch select change event and apply to customselect
+            _onchange: function() {
+              $select.val($(this).val());
+              methods.select($(this).val());
+            }
+          };
+
+          if($select.is("select"+$options.selector) && !$select.data("cs-options")) {
+            setup.init();
+          }
         },
-			removalDelay: 300,
-			mainClass: 'mfp-fade'
-		});
+
+        // Open/Close Select Box
+        toggle: function() {
+          if($this.is($options.selector+"-open")) {
+            methods.close();
+          }
+          else {
+            methods.open();
+          }
+        },
+
+        // Open Select Box
+        open: function() {
+          if(!$is_mobile) {
+            $this.addClass($options.csclass+"-open");
+            $this.find("input").focus();
+            $this.find("ul li.no-results").hide();
+            methods._selectMove($select.get(0).selectedIndex)
+          }
+        },
+
+        // Close Select Box
+        close: function() {
+          $this.removeClass($options.csclass+"-open");
+          $this.find("input").val("").blur();
+          $this.find("ul li").not(".no-results").addClass("active");
+
+          var options = $this.find("ul li").not(".no-results");
+          $this.find("div div").css({
+            "overflow-y": options.length > $options.numitems ? "scroll" : "visible"
+          });
+
+          $this.find("a").focus();
+        },
+
+        // Search Options
+        search: function(value) {
+          value = $.trim(value.toLowerCase());
+
+          var noresults = $this.find("ul li.no-results").hide();
+
+          // Search for Match
+          var options = $this.find("ul li").not(".no-results");
+          options.each(function() {
+            var text = ($(this).text()+"").toLowerCase();
+            var val  = ($(this).data("value")+"").toLowerCase();
+            var add  = false;
+
+            if($options.searchblank || val.length > 0) {
+              if($options.searchvalue && val.indexOf(value) >= 0) {
+                add = true;
+              }
+              else if(text.indexOf(value) >= 0) {
+                add = true;
+              }
+            }
+            else if(value.length == 0) {
+              add = true;
+            }
+
+            add ? $(this).addClass("active") : $(this).removeClass("active");
+          });
+          options = options.filter(".active").filter(":visible");
+
+          // Set Scroll
+          $this.find("div div").css({
+            "overflow-y": options.length > $options.numitems ? "scroll" : "visible"
+          });
+
+          if(options.length > 0) {
+            // Select First Result
+            methods._selectMove(0);
+          }
+          else {
+            // No Results
+            noresults.show();
+          }
+        },
+
+        searchmove: function(value) {
+          var index = [];
+          $select.find("option").each(function(i) {
+            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) == 0) {
+              index.push(i);
+            }
+          });
+
+          if(index.length > 0) {
+            methods._selectMove(index[0]);
+          }
+        },
+
+        // Select Option
+        select: function(value, disabled) {
+          if(!disabled) {
+            if($select.val() != value) {
+              $select.val(value).change();
+            }
+            var option  = $select.find("option:selected");
+            var link    = $this.find("a");
+            link.find("span").text(option.text().length > 0 ? option.text() : $options.emptytext);
+            link.removeAttr("class");
+            if($options.useoptionclass && option.attr("class")) {
+              link.addClass(option.attr("class") || "");
+            }
+            methods.close();
+          }
+        },
+
+        // Move Selection Up
+        selectUp: function() {
+          var options   = $this.find("ul li.active").not(".no-results");
+          var selected  = options.index(options.filter(".option-hover"));
+
+          var moveTo = selected - 1;
+          moveTo = moveTo < 0 ? options.length - 1 : moveTo;
+
+          methods._selectMove(moveTo);
+        },
+
+        // Move Selection Down
+        selectDown: function() {
+          var options   = $this.find("ul li.active").not(".no-results");
+          var selected  = options.index(options.filter(".option-hover"));
+
+          var moveTo = selected + 1;
+          moveTo = moveTo > options.length - 1 ? 0 : moveTo;
+
+          methods._selectMove(moveTo);
+        },
+
+        // Destroy customselect instance
+        destroy: function() {
+          if($select.data("cs-options")) {
+            $select.removeData("cs-options").insertAfter($this);
+            $this.remove();
+          }
+        },
+
+        // Move Selection to Index
+        _selectMove: function(index) {
+          var options   = $this.find("ul li.active");
+          options.removeClass("option-hover").eq(index).addClass("option-hover");
+
+          var scroll = $this.find("div div");
+          if(scroll.css("overflow-y") == "scroll") {
+            scroll.scrollTop(0);
+
+            var selected = options.eq(index);
+            offset = selected.offset().top + selected.outerHeight() - scroll.offset().top - scroll.height();
+
+            if(offset > 0) {
+              scroll.scrollTop(offset);
+            }
+          }
+        }
+      };
+
+      var call_method = method;
+
+      // Check for Additional Options
+      if(call_method && typeof call_method == "object") {
+        call_method = "init";
+        value       = null;
+      }
+
+      $options.selector = "."+$options.csclass;
+
+      // Load Requested Method
+      call_method = call_method ? call_method : "init";
+      if(typeof methods[call_method] == "function") {
+        methods[call_method].call(this, value);
+      }
+
+      if(call_method != "destroy") {
+        $select.data("cs-options", $options);
+      }
     });
 
-	/*====== select 2 ========*/
-	$(".location-results").select2({
-  		minimumResultsForSearch: Infinity
-	});
-
-  	$(".location-search").select2({
-		maximumSelectionLength: 3
-	});
-
-
-	//Testimonial Carousel (Slick2)
-  	$('.slider-for-two').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '.slider-nav-two',
-  	});
-
-
-  	$('.slider-nav-two').slick({
-		slidesToShow:7,
-		slidesToScroll:1,
-		asNavFor: '.slider-for-two',
-		dots: false,
-		centerMode: true,
-		centerPadding: '0px',
-		focusOnSelect: true,
-		variableWidth: false,
-		arrows: false,
-		focusOnSelect: true,
-		responsive: [
-	  	{
-			breakpoint: 600,
-			settings: {
-			  slidesToShow:5,
-			  slidesToScroll: 2
-			}
-	  	},
-	  	{
-			breakpoint: 480,
-			settings: {
-			  	slidesToShow: 3,
-			  	slidesToScroll: 1
-			}
-	  	}] 
-	});
-
-	$('.ImageBackground').each(function(){
-		var $this = $(this),
-			$imgHolder = $this.children('.ImageBackground__holder'),
-			thisIMG = $imgHolder.children().attr('src'),
-			thisURL = 'url('+thisIMG+')';
-			$imgHolder.css('background-image', thisURL);
-
-		if ($this.hasClass('js-Parallax') && windowWidth >768) {
-			$imgHolder.regentParallax();
-		}
-	});
-
+    return this;
+  };
 })(jQuery);
