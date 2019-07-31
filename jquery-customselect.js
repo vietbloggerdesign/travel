@@ -158,7 +158,7 @@
               // Container
               var subcont = $("<div/>").appendTo($this);
               // Input Box
-              var input = $("<input type='input' placeholder='Search'/>").appendTo(subcont);
+              var input = $("<input type='input' placeholder='Tìm kiếm'/>").appendTo(subcont);
               input.keyup(function(e) {
                 if ($.inArray(e.which, [13, 38, 40]) < 0) {
                   if ($options.search) {
