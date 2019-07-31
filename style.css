@@ -560,7 +560,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .tabbased-search-area-4 .tab-content .hotels-form .custom-select,.tabbased-search-area-4 .tab-content .flights-form .custom-select{background:#f1f1f1!important}
 .popular-packages-2{background:#f4f4f4}
 .popular-packages-2 .single-package{box-shadow:0 0 10px rgba(0,0,0,0.2)!important}
-.discount-package-4{background:#37b721 url("https://2.bp.blogspot.com/-rAjCcBFpmDc/XUBlrVfCImI/AAAAAAAASYA/XF0_FWmO_wsQXL0flZoOkJRnmVZH3JHHQCLcBGAs/s1600/discount.jpg") no-repeat scroll center center/cover;padding:100px 0;position:relative}
+.discount-package-4{background:#37b721 url("/images/discount.jpg") no-repeat scroll center center/cover;padding:100px 0;position:relative}
 .discount-package-4:before{position:absolute;width:100%;height:100%;content:'';background:transparent linear-gradient(to left,transparent 0%,transparent -10%,rgba(55,183,33,0.7) 100%) repeat scroll 0 0;background:transparent -moz-linear-gradient(to left,transparent 0%,transparent -10%,rgba(55,183,33,0.7) 100%) repeat scroll 0 0;background:transparent -webkit-linear-gradient(to left,transparent 0%,transparent -10%,rgba(55,183,33,0.7) 100%) repeat scroll 0 0;left:0;top:0;z-index:1}
 .discount-package-4 .discount-package-4-contents{position:relative;z-index:3}
 .discount-package-4 .discount-package-4-contents .discount-package-4-title h2{font-size:40px;font-weight:600;color:#ffffff;padding-bottom:30px}
@@ -575,7 +575,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .top-destination-area figure figcaption h4{color:#ffffff;font-size:20px;font-weight:600}
 .top-destination-area figure:hover img{transform:scale(1.2)}
 .top-destination-area figure:hover figcaption{opacity:1;visibility:visible;top:50%}
-.achievment-bg{background:#37b721 url("https://1.bp.blogspot.com/-rrUDa1zpM8o/XUBETdnxZCI/AAAAAAAASWg/vLADVR7XDEwVwxsivspK6QpVjNDknet7gCLcBGAs/s1600/achivment.jpg") repeat scroll 0 0;background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative}
+.achievment-bg{background:#37b721 url("/images/achivment.jpg") repeat scroll 0 0;background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative}
 .achievment-bg:before{position:absolute;width:100%;height:100%;content:'';left:0;top:0;background:rgba(0,0,0,0.3);z-index:1}
 .single-counter{text-align:center;position:relative;z-index:3}
 .single-counter .counter-image{display:block;padding-bottom:20px}
@@ -608,7 +608,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .best-services-area .single-best-services:hover{box-shadow:0 0 10px rgba(0,0,0,0.5)}
 .best-services-area .single-best-services:hover .services-content h4{color:#37b721}
 .best-services-area .single-best-services:hover .services-content a{color:#37b721}
-.discount-package-5{background:red url("https://4.bp.blogspot.com/-MhuWdLzuy0g/XUAvehaa9LI/AAAAAAAASRM/vxyYwo5Wh0cmaJhPrqmcYJJJgttBgw0NwCLcBGAs/s1600/discount5.jpg");background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;overflow:hidden;padding:100px 0;z-index:1}
+.discount-package-5{background:red url("/images/discount5.jpg");background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;overflow:hidden;padding:100px 0;z-index:1}
 .discount-package-5:before{content:"";width:100%;height:100%;background:#000;opacity:0.35;position:absolute;left:0;z-index:-1;top:0}
 .discount-package-5 .discount-package-4-title h2,.discount-package-5 .discount-package-4-title h3{font-size:40px;font-weight:600;color:#ffffff;text-transform:uppercase;padding-bottom:0}
 .discount-package-5 .discount-package-4-title h2 span,.discount-package-5 .discount-package-4-title h3 span{color:#f17b37}
@@ -633,7 +633,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .top-destination-area-5 .single-destionation-5:hover{box-shadow:0 0 10px rgba(0,0,0,0.4)}
 .top-destination-area-5 .single-destionation-5:hover .destination-5-description a{background:#f17b37}
 .top-destination-area-5 .single-destionation-5:hover .destination-5-image img{transform:scale(1.1)}
-.testimonial-area-5{background:#37b721 url("https://2.bp.blogspot.com/-xJB_6wpQCE4/XUAxWkk5rDI/AAAAAAAASSA/-t_98vNcraEQmKUP_Vh2SFfzPG7OkKTdwCLcBGAs/s1600/snow.jpg") no-repeat scroll center center/cover;position:relative;overflow:hidden;padding:100px 0}
+.testimonial-area-5{background:#37b721 url("/images/snow.jpg") no-repeat scroll center center/cover;position:relative;overflow:hidden;padding:100px 0}
 .testimonial-area-5:before{position:absolute;width:100%;height:100%;content:'';left:0;top:0;background:rgba(0,0,0,0.2);z-index:1}
 .testimonial-area-5 .single-testimonial{text-align:center}
 .testimonial-area-5 .single-testimonial img{width:120px;height:120px;display:inline-block}
@@ -656,7 +656,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .hotels-area-2 .single-hotels-2 .hotel-description .hotel-book-btn{bottom:-50px;opacity:0;position:relative;transition:all 0.5s ease 0s}
 .hotels-area-2 .single-hotels-2:hover .hotel-description{bottom:0}
 .hotels-area-2 .single-hotels-2:hover .hotel-book-btn{opacity:1;bottom:-12px}
-.discount-package-6{background:#37b721 url("https://4.bp.blogspot.com/-dkVJSAZpw6g/XUAyruhhQ_I/AAAAAAAASSY/46CLigMJd2YiqlAYtHJzt2Dm9wuNeX36wCLcBGAs/s1600/discount6.jpg") no-repeat scroll center center/cover;padding:190px 0;position:relative}
+.discount-package-6{background:#37b721 url("/images/discount6.jpg") no-repeat scroll center center/cover;padding:190px 0;position:relative}
 .discount-package-6:before{position:absolute;width:100%;height:100%;content:'';background:rgba(0,0,0,0.4);left:0;top:0;z-index:1}
 .discount-package-6 .discount-package-4-contents .discount-package-4-title h2{font-size:39px}
 .discount-package-6 .discount-package-4-contents .discount-package-4-title p{color:#ffffff;font-size:16.8px;line-height:30px}
@@ -716,7 +716,7 @@ aside .booking-form .form-group textarea.form-control{height:auto}
 aside .booking-form .form-group .check-availability,aside .booking-form .form-group .booking-confirm{background:transparent none repeat scroll 0 0;border:1px solid #cccccc;border-radius:3px;font-size:15px;font-weight:400;color:#454545;height:52px;text-transform:capitalize;width:100%}
 aside .booking-form .form-group .booking-confirm{background:#37b721;color:#ffffff;height:60px;font-size:17px;font-weight:500;text-transform:uppercase}
 .adding-form{margin-top:50px}
-.adding-form .addfor-bg{background:#37b721 url("https://3.bp.blogspot.com/-5cw07IQXzvA/XUBgdPWlrYI/AAAAAAAASXk/0GQVcPxI8dIj-ZWDUlA0ireuxHYQImKBgCLcBGAs/s1600/add.jpg");background-position:center center;background-repeat:no-repeat;background-size:cover;padding:60px 0;position:relative}
+.adding-form .addfor-bg{background:#37b721 url("/images/add.jpg");background-position:center center;background-repeat:no-repeat;background-size:cover;padding:60px 0;position:relative}
 .adding-form .addfor-bg:before{position:absolute;content:'';width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,0.6);z-index:1}
 .adding-form .addfor-bg .add-content{position:relative;z-index:8;left:10%}
 .adding-form .addfor-bg .add-content h3{color:#ffffff;font-size:30px;font-weight:600}
@@ -725,7 +725,7 @@ aside .booking-form .form-group .booking-confirm{background:#37b721;color:#fffff
 .adding-form .addfor-bg .add-content .contact-for-add li img{margin-right:10px}
 .mapp iframe{height:700px;width:95%;border:0}
 .scrolloff{pointer-events:none}
-.video-bg{background:#37b721 url("https://4.bp.blogspot.com/-pM0jhIcC3Fc/XUBEhkXEgPI/AAAAAAAASWo/MEcjVW0Ihz8Ww7BnF5bh7sNsd9F0Sf73ACLcBGAs/s1600/videotab.jpg") no-repeat scroll center center/cover;padding:250px 0;position:relative;overflow:hidden}
+.video-bg{background:#37b721 url("/images/videotab.jpg") no-repeat scroll center center/cover;padding:250px 0;position:relative;overflow:hidden}
 .video-bg:before{position:absolute;width:100%;height:100%;left:0;top:0;content:'';background:rgba(0,0,0,0.6);z-index:1}
 .video-bg .video-play-btn{border:3px solid #37b721;border-radius:100%;height:80px;line-height:75px;margin:0 auto;position:relative;text-align:center;width:80px;z-index:33;font-size:25px}
 .video-bg a span i{color:#37b721}
