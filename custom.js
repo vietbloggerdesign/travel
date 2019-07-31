@@ -53,16 +53,6 @@ $(document).ready(function() {
       $this.html(event.strftime('<ul><li><span class="cdown days"><span class="time-count">%-D</span><p class="day-css">Days</p></span></li><li><span class="cdown hour"><span class="time-count">%-H</span> <p class="day-css">Hour</p></span><l/i><li><span class="cdown minutes"><span class="time-count">%M</span> <p class="day-css">Min</p></span></li><li> <span class="cdown second"><span class="time-count">%S</span> <p class="day-css">Sec</p></span></li></ul>'));
     });
   });
-  $('.mapp').addClass('scrolloff');
-  $('#overlay').on("mouseup", function() {
-    $('.mapp').addClass('scrolloff');
-  });
-  $('#overlay').on("mousedown", function() {
-    $('.mapp').removeClass('scrolloff');
-  });
-  $(".map").mouseleave(function() {
-    $('.mapp').addClass('scrolloff');
-  });
   jQuery('nav').meanmenu();
   new WOW().init();
   $(function() {
@@ -70,7 +60,6 @@ $(document).ready(function() {
     var c;
     var a;
     d($("#myTab1 a"), $("#tab-content1"));
-
     function d(e, f, g) {
       e.click(function(i) {
         i.preventDefault();
@@ -108,7 +97,6 @@ $(document).ready(function() {
     var c;
     var a;
     d($("#myTab2 a"), $("#tab-content2"));
-
     function d(e, f, g) {
       e.click(function(i) {
         i.preventDefault();
@@ -198,7 +186,6 @@ $(document).ready(function() {
   $(".location-results").select2({
     minimumResultsForSearch: Infinity
   });
-
   $(".location-search").select2({
     maximumSelectionLength: 3
   });
