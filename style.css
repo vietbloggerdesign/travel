@@ -144,7 +144,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .popular-packages .single-package:hover{box-shadow:0 0 10px rgba(0,0,0,0.2)}
 .popular-packages .single-package:hover .ct-action a{background:#f17b37}
 .popular-packages .single-package:hover .package-content h3{color:#37b721}
-.count-down-bg{background:transparent url("https://1.bp.blogspot.com/-b6xDVySEwVM/XUBdxNkPX-I/AAAAAAAASW4/IsTiVtFNcV8_4jfdbemUaAGlviIwzsXzgCLcBGAs/s1600/countbg.jpg") repeat scroll 0 0;background-repeat:no-repeat;background-size:cover;background-position:center center}
+.count-down-bg{background:transparent url("/images/countbg.jpg") repeat scroll 0 0;background-repeat:no-repeat;background-size:cover;background-position:center center}
 .count-down-bg .count-down-titile{text-align:center;font-size:30px;font-weight:600;color:#ffffff}
 .count-down-bg .count-down-titile h3{line-height:40px;margin-bottom:20px;font-size:30px;font-weight:600}
 .count-down-bg .count-down-titile h3 span.color-one{color:#f17b37}
@@ -169,7 +169,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .destination-slider-active .single-destination:hover figcaption{opacity:1;visivility:visible}
 .destination-slider-active .single-destination:hover figure:before{opacity:1;visibility:visible}
 .destination-slider-active .single-destination:hover .des-city a{color:#37b721}
-.trabble-bg{background:transparent url("https://4.bp.blogspot.com/-Nm7SLjbhd7A/XUBfszQhWTI/AAAAAAAASXM/x0BZtI3gDTgOxzm6htG9ItaQRBIkDC5cwCLcBGAs/s1600/travlec.jpg") no-repeat scroll center center/cover;position:relative}
+.trabble-bg{background:transparent url("/images/travlec.jpg") no-repeat scroll center center/cover;position:relative}
 .trabble-bg:before{position:absolute;content:'';width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,0.5);z-index:2}
 .single-travel{background:#ffffff none repeat scroll 0 0;padding:20px;margin-bottom:40px;border-radius:3px;position:relative;z-index:2;transition:all ease-in-out 0.5s;margin-bottom:30px}
 .single-travel .travel-number{float:left;margin-right:5px;margin-top:-5px}
@@ -196,7 +196,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .single-travel-blog:hover{box-shadow:0 5px 15px rgba(0,0,0,0.3)}
 .single-travel-blog:hover .blog-image img{transform:scale(1.05)}
 .single-travel-blog:hover .blog-post-content a{color:#37b721}
-.testimonial-area{background:transparent url("https://1.bp.blogspot.com/-uElFureid3E/XUBf-i-oqZI/AAAAAAAASXU/knMxnou6aYc6rRQiAEgy-pfafZkpSnBbQCLcBGAs/s1600/testimonial.jpg") no-repeat center center/cover;position:relative}
+.testimonial-area{background:transparent url("/images/testimonial.jpg") no-repeat center center/cover;position:relative}
 .testimonial-area:before{background:rgba(0,0,0,0.5);content:"";height:100%;left:0;position:absolute;top:0;width:100%}
 .testimonial-area .custom-width{width:300px;margin:0 auto}
 .testimonial-area .top-testimonial-image.row.slick-pagination{position:relative;z-index:2}
@@ -205,8 +205,8 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .testimonial-area .top-testimonial-image .slider-nav .slick-center{transform:scale(1.3);padding:0;transition:all ease-in-out 0.3s}
 .testimonial-area .block-text{text-align:center;margin-top:-50px}
 .testimonial-area .block-text .testimonial-message .message{margin-top:30px;position:relative;padding:0 13%}
-.testimonial-area .block-text .testimonial-message .message::before{content:url("https://1.bp.blogspot.com/-hvvhh7oLS4k/XUBgJ4bnQzI/AAAAAAAASXY/YEffCOsEsJ08d0jWjjMxt9PHq64b_rdbACLcBGAs/s1600/quote-left.png");left:3px;position:absolute;top:-30px;z-index:2}
-.testimonial-area .block-text .testimonial-message .message::after{content:url("https://4.bp.blogspot.com/-Kd9ShW2rp08/XUBgR4ayJDI/AAAAAAAASXg/Y5yFD2okjwwe4f-G9cXWZyem4wh7YrfvACLcBGAs/s1600/quote-righ.png");left:auto;position:absolute;right:4px;bottom:-12px}
+.testimonial-area .block-text .testimonial-message .message::before{content:url("/images/quote-left.png");left:3px;position:absolute;top:-30px;z-index:2}
+.testimonial-area .block-text .testimonial-message .message::after{content:url("/images/quote-righ.png");left:auto;position:absolute;right:4px;bottom:-12px}
 .testimonial-area .block-text .testimonial-message .message p{color:#ffffff;font-size:17px;font-weight:400;line-height:25px}
 .testimonial-area .block-text .testimonial-message .rating{padding:15px 0}
 .testimonial-area .block-text .testimonial-message .rating i{color:#ffef3b}
@@ -223,14 +223,14 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .incredible-places .single-place figure figcaption h4 span{color:#37b721}
 .incredible-places .single-place:hover figcaption{left:30px;opacity:1;visibility:visible}
 .incredible-places .single-place:hover figure:before{left:0;opacity:1;visibility:visible}
-.subscribe-bg{background:#37b721 url("https://4.bp.blogspot.com/-a-SL4PkcpaE/XUA_Wg21sSI/AAAAAAAASVY/OH9CRbghoO8XNRFTEs1mkmdFaCVnek4agCLcBGAs/s1600/subscribe.jpg") no-repeat scroll center center/cover;position:relative}
+.subscribe-bg{background:#37b721 url("/images/subscribe.jpg") no-repeat scroll center center/cover;position:relative}
 .subscribe-bg:before{position:absolute;width:100%;height:100%;content:'';left:0;top:0;background:rgba(86,197,67,0.55)}
 .subscribe-area{padding:150px 0}
-.subscribe-area .subscribe-form .serach-form input{background:#ffffff url("https://1.bp.blogspot.com/-00orqeQ2GeQ/XUA_Bv51_1I/AAAAAAAASVQ/v58uQIge1GIPbNAcDvyST00LFRmW0dZMgCLcBGAs/s1600/message.png") repeat scroll 0 0;border:medium none;border-radius:4px;color:#727272;font-size:14px;height:56px;padding-left:20px;padding-right:190px;position:relative;text-transform:capitalize;width:100%;background-repeat:no-repeat;background-position:center right 147px;padding-bottom:0}
+.subscribe-area .subscribe-form .serach-form input{background:#ffffff url("/images/message.png") repeat scroll 0 0;border:medium none;border-radius:4px;color:#727272;font-size:14px;height:56px;padding-left:20px;padding-right:190px;position:relative;text-transform:capitalize;width:100%;background-repeat:no-repeat;background-position:center right 147px;padding-bottom:0}
 .subscribe-area .subscribe-form .serach-form input:focus{outline:none}
 .subscribe-area .subscribe-form .search-btn button{border:medium none;position:absolute;right:0;top:0;background:#f17b37;font-size:15px;padding:17.7px;width:20%;border-radius:0 4px 4px 0;color:#ffffff;text-transform:uppercase;font-weight:600}
 .single-pertner{margin-bottom:20px;transition:all ease-in-out 0.5s}
-.footer-area{background:#2f3133 url("https://4.bp.blogspot.com/-BmbiiNVMc8s/XUA7Jfvu62I/AAAAAAAASTI/zYCaMWRtXkEELr39pMDYjAMkMiujzmHugCLcBGAs/s1600/footer1.jpg") no-repeat scroll 99% center/cover;padding-bottom:10px}
+.footer-area{background:#2f3133 url("/images/footer1.jpg") no-repeat scroll 99% center/cover;padding-bottom:10px}
 .footer-area .single-footer{padding:80px 0}
 .footer-area .single-footer .footer-title{font-weight:600;font-size:20px;color:#ffffff;padding:20px 0}
 .footer-area .single-footer .footer-left .footer-logo p{color:#ffffff;font-size:15px;line-height:25px;padding-bottom:15px}
@@ -298,7 +298,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .tabbased-search-area-2 .tabbable-menu .tab-menu li a:before{bottom:-15px}
 .tabbased-search-area-2 .tabbable-menu .tab-menu li:hover a:before{opacity:1;visibility:visible;width:100%}
 .tabbased-search-area-2 .background-opacity{background:rgba(22,15,15,0.8)}
-.tabbased-search-area-2 .bg-shadoow-image{background:transparent url("https://3.bp.blogspot.com/-U00J2DiOlec/XUBAk46Ym5I/AAAAAAAASVw/uJ4zeizASgg9QO7xUX_FYXtG8H2phON0QCLcBGAs/s1600/two.png") no-repeat scroll center center/cover;box-shadow:0 0 25px rgba(0,0,0,0.15);padding:100px 50px 50px;margin-top:-30px}
+.tabbased-search-area-2 .bg-shadoow-image{background:transparent url("/images/two.png") no-repeat scroll center center/cover;box-shadow:0 0 25px rgba(0,0,0,0.15);padding:100px 50px 50px;margin-top:-30px}
 .tabbased-search-area-2 .tab-content-2 .hotels-form input,.tabbased-search-area-2 .tab-content-2 .flights-form input{background:#f2f2f2;border:1px solid #c2c2c2;border-radius:3px}
 .tabbased-search-area-2 .tab-content-2 .hotels-form .hotel-input-4 .custom-select,.tabbased-search-area-2 .tab-content-2 .hotels-form .hotel-input-4-23 .custom-select,.tabbased-search-area-2 .tab-content-2 .flights-form .hotel-input-4 .custom-select,.tabbased-search-area-2 .tab-content-2 .flights-form .hotel-input-4-23 .custom-select{background:#f2f2f2 url("https://2.bp.blogspot.com/-89HDB4_nmuw/XUBAUA8yelI/AAAAAAAASVk/aU9EsZo9luoiCodbsagdeg5NF99A7-sJACLcBGAs/s1600/arrow.png");background-repeat:no-repeat;background-position:center right 25px;border:1px solid #c2c2c2}
 .tabbased-search-area-2 .tab-content-2 .hotel-input-2,.tabbased-search-area-2 .tab-content-2 .hotel-input-4,.tabbased-search-area-2 .tab-content-2 .hotel-input-1,.tabbased-search-area-2 .tab-content-2 .custom-select,.tabbased-search-area-2 .tab-content-2 .hotel-input-4-23,.tabbased-search-area-2 .tab-content-2 .tour-input-20,.tabbased-search-area-2 .tab-content-2 .tour-input-15{margin-right:-3px;border-right:none!important}
@@ -311,11 +311,11 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .tabbased-search-area-2 .tab-content-2 .hotel-input-4-23{width:25%!important}
 .tabbased-search-area-2 .tab-content-2 .flights-form .tour-input-20 .custom-select,.tabbased-search-area-2 .tab-content-2 .flights-form .tour-input-15 .custom-select,.tabbased-search-area-2 .tab-content-2 .flights-form .tour-input-7-5 .custom-select{background:#f2f2f2;border:1px solid #c2c2c2}
 .tabbased-search-area-2 .tab-content-2 .flights-form .tour-input-7-5{width:8%!important}
-.tabbased-search-area-2 .tab-content-2 .flights-form .tour-input-7-5 .custom-select{background:#f2f2f2 url("https://2.bp.blogspot.com/-89HDB4_nmuw/XUBAUA8yelI/AAAAAAAASVk/aU9EsZo9luoiCodbsagdeg5NF99A7-sJACLcBGAs/s1600/arrow.png");background-repeat:no-repeat;background-position:center right 9px}
+.tabbased-search-area-2 .tab-content-2 .flights-form .tour-input-7-5 .custom-select{background:#f2f2f2 url("/images/arrow.png");background-repeat:no-repeat;background-position:center right 9px}
 .tabbased-search-area-2 .tab-content-2 .flights-form .border-right-none{border-right:none!important}
 .section-title-version-2 h2,.section-title-version-2-white h2,.section-title-version-2-black h2{background-color:transparent;background-image:url("https://1.bp.blogspot.com/-Z4QTE9qqWr0/XUBAKwxzlHI/AAAAAAAASVg/RIzn1vPQOyYiGnOHKPLLrn17jj2oJWcvACLcBGAs/s1600/line2.png");background-repeat:no-repeat;color:#454545;font-size:37px;font-weight:500;padding-bottom:20px;position:relative;text-transform:capitalize;background-position:bottom left;z-index:2}
 .section-title-version-2 h5,.section-title-version-2-white h5,.section-title-version-2-black h5{font-size:18px;color:#323232;font-weight:400;line-height:30px}
-.section-title-version-2-white h2,.section-title-version-2-black h2{background-image:url("https://1.bp.blogspot.com/-Z4QTE9qqWr0/XUBAKwxzlHI/AAAAAAAASVg/RIzn1vPQOyYiGnOHKPLLrn17jj2oJWcvACLcBGAs/s1600/line2.png");background-repeat:no-repeat;background-position:center bottom;color:#ffffff}
+.section-title-version-2-white h2,.section-title-version-2-black h2{background-image:url("/images/line2.png");background-repeat:no-repeat;background-position:center bottom;color:#ffffff}
 .section-title-version-2-white p,.section-title-version-2-black p{color:#ffffff;font-size:15px;padding-bottom:45px}
 .section-title-version-2-black h2{color:#454545}
 .section-title-version-2-black p{color:#727272}
@@ -325,7 +325,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .welcome-area .single-welcome-area .overlay-image .img-thumbnail{background-color:#f7f7f7;border-radius:2px;padding:3px}
 .welcome-area .single-welcome-text .welcome-content p{font-size:15px;font-weight:15px;color:#727272}
 .welcome-area .single-welcome-text .welcome-content a{margin-top:40px}
-.tour-package-bg{background:transparent url("https://1.bp.blogspot.com/-Ry6TIM-U1H0/XUBDVVL0e7I/AAAAAAAASV8/TX4_tUbv-WUoDVMiq2mi61RXwAteJQQHQCLcBGAs/s1600/package.jpg") repeat scroll 0 0;background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;z-index:1;overflow:hidden}
+.tour-package-bg{background:transparent url("/images/package.jpg") repeat scroll 0 0;background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;z-index:1;overflow:hidden}
 .tour-package-bg:before{position:absolute;content:"";left:0;width:100%;height:100%;top:0;background:rgba(0,0,0,0.5);z-index:-1}
 .tour-package-bg:hover .owl-nav div.owl-prev{opacity:1;left:-70px}
 .tour-package-bg:hover .owl-nav div.owl-next{opacity:1;right:-70px}
@@ -372,7 +372,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .popular-country .destination-countrys .tab-content figure:hover figcaption .city-name span{color:#37b721}
 .popular-country .destination-countrys .tab-content figure:hover figcaption .city-name .tower-bridge li{color:#ffffff}
 .popular-country .destination-countrys .tab-content figure:hover .travel-book-btn{opacity:1;bottom:0}
-.discount-bg{clear:both;background:red url("https://1.bp.blogspot.com/-Yu4EXHd29qI/XUBDiygsn1I/AAAAAAAASWA/o1Bw4urmXvwXsScAZ3Tlp9jkx-banPSWgCLcBGAs/s1600/tagmahal.jpg");background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;overflow:hidden;z-index:1;padding:200px 0}
+.discount-bg{clear:both;background:red url("/images/tagmahal.jpg");background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;overflow:hidden;z-index:1;padding:200px 0}
 .discount-bg:before{content:"";width:100%;height:100%;background:rgba(0,0,0,0.5) none repeat scroll 0 0;opacity:0.7;position:absolute;left:0;z-index:-1;top:0}
 .discount-bg .discount-content h2,.discount-bg .discount-content h3,.discount-bg .discount-content h4{padding-bottom:20px}
 .discount-bg .discount-content h2{font-size:40px;font-weight:600px;color:#fefefe;text-transform:uppercase}
@@ -395,7 +395,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .offer-package .single-offer .single-offer-details .offer-details .offer-btn a{transition:all ease-in-out 0.3s}
 .offer-package .single-offer:hover{box-shadow:0 0 10px rgba(0,0,0,0.6)}
 .offer-package .single-offer:hover .offer-btn a{background:#f17b37}
-.section-blog-bg{background:transparent url("https://3.bp.blogspot.com/-EM-Y3fCaTk0/XUBDtvOHUDI/AAAAAAAASWI/kUHnTf4bsyw7eX21o9k_rxoLm2-EzuwagCLcBGAs/s1600/blog.jpg") repeat scroll 0 0;background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;z-index:1;padding:100px 0}
+.section-blog-bg{background:transparent url("/images/blog.jpg") repeat scroll 0 0;background-repeat:no-repeat;background-size:cover;background-position:center center;position:relative;z-index:1;padding:100px 0}
 .section-blog-bg:before,.section-blog-bg:after{position:absolute;width:100%;height:100%;left:0;top:0;background:rgba(0,0,0,0.3);z-index:-1;content:'';overflow:hidden}
 .section-blog-bg:after{background:rgba(55,183,33,0.2)}
 .blog-2 .single-travel-blog .blog-content{background:#ffffff}
@@ -414,7 +414,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .blog-2 .single-travel-blog:hover .read-more-btn a{color:#37b721}
 .blog-2 .single-travel-blog:hover .blog-post-content .post-social-2 li a{color:#454545}
 .blog-2 .single-travel-blog:hover .blog-post-content .post-social-2 li a i{color:#37b721}
-.subscribe-area-2{background:transparent url("https://1.bp.blogspot.com/-m97iBV3g9V8/XUA1sHrhKHI/AAAAAAAASS8/5RB7VRDlh7Yrb99SJBnkb83bOK8mg7tHgCLcBGAs/s1600/subs.jpg") repeat scroll 0 0;padding:50px 0;background-position:center center}
+.subscribe-area-2{background:transparent url("/images/subs.jpg") repeat scroll 0 0;padding:50px 0;background-position:center center}
 .subscribe-area-2 .subscribe-title{color:#ffffff;font-size:30px;font-weight:600;margin-top:14px;text-transform:uppercase}
 .grid-3{padding:0}
 .grid-3 .col-md-6{padding-left:0;padding-right:0}
@@ -441,7 +441,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .header-area-style-3 .sticky{background:#333537}
 .header-area-style-3 .sticky .main-menu li a{color:#ffffff}
 .book-online a{background:#37b721 none repeat scroll 0 0;border-radius:5px;color:#fff;display:block;font-size:14px;margin-top:20px;padding:10px 10px;text-transform:uppercase;width:100%;text-align:center}
-.herounit-bg{background:transparent url("https://2.bp.blogspot.com/-Rst1Gk3W5dU/XUBD5tonz9I/AAAAAAAASWQ/DeR4DhrnAl4qgw7oqfl0mdDCYyMfPXFMQCLcBGAs/s1600/header.jpg") repeat scroll center center/cover;padding:100px 0;position:relative;background-attachment:fixed}
+.herounit-bg{background:transparent url("/images/header.jpg") repeat scroll center center/cover;padding:100px 0;position:relative;background-attachment:fixed}
 .herounit-bg .version-3-search-style .search-area-title{padding-bottom:15px}
 .herounit-bg .version-3-search-style .search-area-title h2{font-size:50px;font-weight:600;color:#ffffff}
 .herounit-bg .version-3-search-style .search-area-title h3{font-size:25px;font-weight:400;color:#ffffff}
@@ -493,7 +493,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .single-discount-deal:hover figure img{transform:scale(1.1)}
 .single-discount-deal:hover figcaption{top:50%}
 .single-discount-deal:hover .travel-book-btn{opacity:1;bottom:0}
-.video-play{background:#37b721 url("https://3.bp.blogspot.com/-Cm84nfctO6s/XUBEFYTEtSI/AAAAAAAASWY/TMdk66vsiIEjq8RDtZ9-HV_XlTyGyN6ZgCLcBGAs/s1600/video.jpg") no-repeat scroll center center/cover;height:600px;position:relative}
+.video-play{background:#37b721 url("/images/video.jpg") no-repeat scroll center center/cover;height:600px;position:relative}
 .video-play:before{position:absolute;background:rgba(0,0,0,0.3);width:100%;height:100%;top:0;left:0;content:'';z-index:1}
 .video-play .video-content{position:absolute;top:50%;transform:translateY(-50%);left:0;right:0;margin:0 auto;text-align:center;z-index:3}
 .video-play .video-content .video-play-btn{line-height:50px}
