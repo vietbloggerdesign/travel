@@ -92,10 +92,10 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .tabbased-search-area .tab-content .hotels-form input::-ms-input-placeholder,.tabbased-search-area .tab-content .flights-form input::-ms-input-placeholder{color:#555555}
 .tabbased-search-area .tab-content .hotels-form .hotel-input-2,.tabbased-search-area .tab-content .flights-form .hotel-input-2{width:20%;float:left;border-right:1px solid #ccc}
 .tabbased-search-area .tab-content .hotels-form .hotel-input-4,.tabbased-search-area .tab-content .flights-form .hotel-input-4{width:25%;float:left;border-right:1px solid #ccc}
-.tabbased-search-area .tab-content .hotels-form .hotel-input-4 .custom-select,.tabbased-search-area .tab-content .flights-form .hotel-input-4 .custom-select{width:100%;height:53px;border:none;background:#fff url("https://2.bp.blogspot.com/-89HDB4_nmuw/XUBAUA8yelI/AAAAAAAASVk/aU9EsZo9luoiCodbsagdeg5NF99A7-sJACLcBGAs/s1600/arrow.png");background-repeat:no-repeat;background-position:center right 25px}
+.tabbased-search-area .tab-content .hotels-form .hotel-input-4 .custom-select,.tabbased-search-area .tab-content .flights-form .hotel-input-4 .custom-select{width:100%;height:53px;border:none;background:#fff url("/images/arrow.png");background-repeat:no-repeat;background-position:center right 25px}
 .tabbased-search-area .tab-content .hotels-form .hotel-input-4 .custom-select a,.tabbased-search-area .tab-content .flights-form .hotel-input-4 .custom-select a{color:#555555;text-align:left;padding:16px 20px}
 .tabbased-search-area .tab-content .hotels-form .hotel-input-4-23,.tabbased-search-area .tab-content .flights-form .hotel-input-4-23{width:23%;float:left;border-right:1px solid #ccc}
-.tabbased-search-area .tab-content .hotels-form .hotel-input-4-23 .custom-select,.tabbased-search-area .tab-content .flights-form .hotel-input-4-23 .custom-select{width:100%;height:53px;border:none;background:#fff url("https://2.bp.blogspot.com/-89HDB4_nmuw/XUBAUA8yelI/AAAAAAAASVk/aU9EsZo9luoiCodbsagdeg5NF99A7-sJACLcBGAs/s1600/arrow.png");background-repeat:no-repeat;background-position:center right 25px}
+.tabbased-search-area .tab-content .hotels-form .hotel-input-4-23 .custom-select,.tabbased-search-area .tab-content .flights-form .hotel-input-4-23 .custom-select{width:100%;height:53px;border:none;background:#fff url("/images/arrow.png");background-repeat:no-repeat;background-position:center right 25px}
 .tabbased-search-area .tab-content .hotels-form .hotel-input-4-23 .custom-select a,.tabbased-search-area .tab-content .flights-form .hotel-input-4-23 .custom-select a{color:#555555;text-align:left;padding:16px 20px;width:265px}
 .tabbased-search-area .tab-content .hotels-form .hotel-input-1,.tabbased-search-area .tab-content .flights-form .hotel-input-1{width:12%;float:left;border-right:1px solid #ccc}
 .tabbased-search-area .tab-content .hotels-form .hotel-input-1:last-child,.tabbased-search-area .tab-content .flights-form .hotel-input-1:last-child{border-right:none}
@@ -111,7 +111,7 @@ header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .tabbased-search-area .tab-content .flights-form .tour-input-15{width:13%;float:left;border-right:1px solid #ccc}
 .tabbased-search-area .tab-content .flights-form .tour-input-7-5{width:7%;float:left;border-right:1px solid #ccc}
 .tabbased-search-area .tab-content .flights-form .tour-input-7-5:last-child{border-right:none}
-.tabbased-search-area .tab-content .flights-form .tour-input-7-5 .custom-select{background:#fff url("https://2.bp.blogspot.com/-89HDB4_nmuw/XUBAUA8yelI/AAAAAAAASVk/aU9EsZo9luoiCodbsagdeg5NF99A7-sJACLcBGAs/s1600/arrow.png");background-repeat:no-repeat;background-position:center right 8px}
+.tabbased-search-area .tab-content .flights-form .tour-input-7-5 .custom-select{background:#fff url("/images/arrow.png");background-repeat:no-repeat;background-position:center right 8px}
 .tabbased-search-area .tab-content .flights-form .custom-select{width:100%;height:53px;border:none}
 .tabbased-search-area .tab-content .flights-form .custom-select a{color:#555555;text-align:left;padding:16px 20px}
 .section-title,.section-title-white,.section-title-white-2{margin-bottom:60px;margin-top:10px}
