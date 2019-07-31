@@ -143,6 +143,12 @@ $(document).ready(function() {
   $("#standard2").customselect();
   $("#standard3").customselect();
   $("#standard4").customselect();
+  $("#standard5").customselect();
+  $("#standard6").customselect();
+  $("#standard7").customselect();
+  $("#standard8").customselect();
+  $("#standard9").customselect();
+  $("#standard10").customselect();
   $("#nosearch").customselect({
     search: false
   });
@@ -182,11 +188,5 @@ $(document).ready(function() {
         items: 1
       }
     }
-  });
-  $(".location-results").select2({
-    minimumResultsForSearch: Infinity
-  });
-  $(".location-search").select2({
-    maximumSelectionLength: 3
   });
 })(jQuery);
