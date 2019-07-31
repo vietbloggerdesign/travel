@@ -40,7 +40,7 @@ body{font-family:'Roboto',sans-serif;color:#252525;font-size:16px;font-weight:40
 .quick-shop{padding:8px 22px!important}
 .travel-primary-btn-2{background:#f17b37}
 #preloader{position:fixed;top:0;left:0;right:0;bottom:0;background-color:#fefefe;z-index:9999}
-#status{width:200px;height:200px;position:absolute;left:50%;top:50%;background-image:url("https://3.bp.blogspot.com/-GFssnAHkMWg/XUBeBY_EMXI/AAAAAAAASXA/R2BSqxsLNAExG-rWTDQUi_moly9oEvCKgCLcBGAs/s1600/preloader.gif");background-repeat:no-repeat;background-position:center;margin:-100px 0 0 -100px}
+#status{width:200px;height:200px;position:absolute;left:50%;top:50%;background-image:url("/images/preloader.gif");background-repeat:no-repeat;background-position:center;margin:-100px 0 0 -100px}
 header{position:absolute;z-index:99;width:100%;top:0;left:0}
 .header-top-area{background:rgba(34,67,74,0.5)}
 .header-top-area .header-top-left .header-top-contact li{display:inline-block;padding:16px;color:#ffffff;font-size:14px;font-weight:300}
